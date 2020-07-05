@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span class="material-icons">
+                                local_fire_department
+                            </span>
+                            <span> Top Headlines</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="overflow-auto">
+            <div class="flex-column ">
+
+                <div *ngFor="let headline of headlinesArray">
+                    <app-news-card [headline]="headline"></app-news-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
